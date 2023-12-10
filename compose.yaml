@@ -1,0 +1,11 @@
+version: '3'
+services:
+  airport-db:
+    image: library/postgres:latest
+    ports:
+      - "5432:5432"
+    container_name: eduwise-db-postgres
+    environment:
+      - POSTGRES_DB= eduwise-db
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_USER=admin

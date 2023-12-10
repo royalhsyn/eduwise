@@ -1,0 +1,39 @@
+server:
+  port: 8081
+  error:
+    whitelabel:
+      enabled: false
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
+    username: admin
+    password: admin
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog-master.yml
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+    show-sql: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: royalhuseynov225@gmail.com
+    password: 'eotfywkmxrvtbhrj'
+    protocol: smtp
+    tls: true
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+
+
+
+app:
+  registration:
+    base-url: 'http://127.0.0.1:8081'
+  jwt:
+    secret: blah
